@@ -15,10 +15,10 @@ next is to create the Pdb
 
 ```sql
 CREATE PLUGGABLE DATABASE plsql_class2024db
-    ADMIN USER yv_plsqlauca IDENTIFIED BY thug1crew
-    ROLES = (DBA)
-    FILE_NAME_CONVERT = ('C:\APP\PREACHER\PRODUCT\18.0.0.1\ORADATA\XE\PDBSEED\',
-   'C:\APP\PREACHER\PRODUCT\18.0.0.1\ORADATA\XE\plsql_class2024db\');
+ADMIN USER yv_plsqlauca IDENTIFIED BY thug1crew
+ROLES = (DBA)
+FILE_NAME_CONVERT = ('C:\APP\PREACHER\PRODUCT\18.0.0.1\ORADATA\XE\PDBSEED\',
+'C:\APP\PREACHER\PRODUCT\18.0.0.1\ORADATA\XE\plsql_class2024db\');
 ```
 ![alt text](creation.JPG)
 
@@ -82,3 +82,28 @@ FILE_NAME_CONVERT = ('C:\APP\PREACHER\PRODUCT\18.0.0.1\ORADATA\XE\PDBSEED\', 'C:
 
 ### _Enabale for Usage_
 
+```sql
+
+ALTER PLUGGABLE DATABASE yv_to_delete_pdb OPEN;
+
+SHOW PDBS;
+```
+![alt text](ready.JPG)
+
+### _Start the deletion_
+
+To delete the Pluggable database is by two steps :
+
+**step 1**: CLOSE the pluggable db
+
+```sql
+ALTER PLUGGABLE DATABASE yv_to_delete_pdb CLOSE IMMEDIATE;
+```
+**step 2**: DROP the pluggable db
+
+```sql
+DROP PLUGGABLE DATABASE yv_to_delete_pdb INCLUDING DATAFILES;
+```
+AND VOILA!!
+
+![alt text](deletion.JPG)

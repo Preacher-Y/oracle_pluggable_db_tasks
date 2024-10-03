@@ -22,7 +22,7 @@ CREATE PLUGGABLE DATABASE plsql_class2024db
 ```
 ![alt text](creation.JPG)
 
-### _Able Usage_
+### _Enable for Usage_
 
 When the Pdb is created it cannot be access or used immediately so it is need to be open using the following codes:
 
@@ -65,4 +65,20 @@ show con_name con_id  --- To show what database it is connect to
 ### _Connect to SQL Developer_
 
 ![alt text](canbeaccess.JPG)
+
+## **Deletion Pluggable Database**
+
+### _create a delete test Pdb_
+
+i will create as show in the above
+
+```sql
+CREATE PLUGGABLE DATABASE yv_to_delete_pdb
+ADMIN USER yv_delplsqlauca IDENTIFIED BY thug1crew
+ROLES = (DBA)
+FILE_NAME_CONVERT = ('C:\APP\PREACHER\PRODUCT\18.0.0.1\ORADATA\XE\PDBSEED\', 'C:\APP\PREACHER\PRODUCT\18.0.0.1\ORADATA\XE\yv_to_delete_pdb\');
+```
+![alt text](createdel.JPG)
+
+### _Enabale for Usage_
 

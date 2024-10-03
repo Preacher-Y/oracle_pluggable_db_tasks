@@ -24,7 +24,7 @@ CREATE PLUGGABLE DATABASE plsql_class2024db
 
 ### _Able Usage_
 
-Whne the Pdb is created it cannot be access or used immediately so it is need to be open using the following codes:
+When the Pdb is created it cannot be access or used immediately so it is need to be open using the following codes:
 
 ```sql
 
@@ -34,5 +34,35 @@ SELECT name, open_mode from V$PDBS; --- this is to see if it is opened or ready 
 ```
 ![alt text](openpd.JPG)
 
+### _Configuration_
 
+Use _Net configuration Assistant_ app found in your machine and follow the the steps:
+
+**step 1**: local net service name configuration
+
+**step 2**: add
+
+**step 3**: Service name : plsql_class2024db
+
+**step 4**: TCP
+
+**step 5**: hostname: localhost, port: 1522
+
+**step 6**: Do the test if u want
+
+**step 7**: give an alias your Pdb for easy access :plsqlauca and finish
+
+And Try to connect using the following codes:
+
+```sql
+connect yv_plsqlauca/thug1crew@plsqlauca;
+
+show con_name con_id  --- To show what database it is connect to
+```
+
+![alt text](afterconfinguration.JPG)
+
+### _Connect to SQL Developer_
+
+![alt text](canbeaccess.JPG)
 

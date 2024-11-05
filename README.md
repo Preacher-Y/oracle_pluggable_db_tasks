@@ -107,3 +107,13 @@ DROP PLUGGABLE DATABASE yv_to_delete_pdb INCLUDING DATAFILES;
 AND VOILA!!
 
 ![alt text](deletion.JPG)
+
+# Oracle Enterprise Manager 
+
+### for the configure:
+
+![alt text](host.JPG)
+
+### But since I am using oracle 18c the Enterprise Manager dont respond:
+
+![alt text](oem.JPG)
